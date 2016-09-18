@@ -1,11 +1,4 @@
-# Example React-Babel-Webpack
-- No bullshit, just simple!
-- If you have any questions, you can cantact by QQ：416175716
-- Other SPA(其他单页应用)：
-  <br/>vue.js：https://github.com/allan2coder/Vue-SPA
-  <br/>angularjs: https://github.com/allan2coder/AngularJs-SPA
-
-![image](https://raw.githubusercontent.com/allan2coder/react-spa/master/screenshots/jdfw.gif)
+# Example React-Redux-Webpack
 
 ## Features
 
@@ -29,7 +22,7 @@
 First, you should clone the repo and install the dependencies.
 
 ```bash
-$ git clone https://github.com/allan2coder/React-SPA-Tutorial.git <yourAppName>
+$ git clone https://github.com/allan2coder/React-Redux-SPA.git <yourAppName>
 $ cd <yourAppName>
 $ npm install
 ```
@@ -78,4 +71,4 @@ myfile.js: line 10, col 39, Octal literals are not allowed in strict mode.
 ## License
 
 MIT
-# React-SPA-weixin
+# React-Redux-Webpack
