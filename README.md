@@ -1,4 +1,4 @@
-http://emmenko.github.io/redux-react-router-async-example
+
 
 This is a boilerplate example showcasing _mostly_ [Redux](https://github.com/gaearon/redux) and [React Router](https://github.com/rackt/react-router) and it aims to provide different examples or use cases with the two libraries.
 
@@ -23,6 +23,7 @@ This is a boilerplate example showcasing _mostly_ [Redux](https://github.com/gae
   - nested routes
   - secured area by login
   - keep routes into state for easy time travel
+  
 - `i18n` support by `react-intl`
   - scripts to extract messages and generate `XLIFF` files for translators
 - GitHub API with pagination
@@ -53,12 +54,3 @@ You can also run a script to extract all those translations as key-value.
 ```bash
 $ npm run build:i18n:langs
 ```
-
-
-#### Thanks
-
-- [Redux](https://github.com/gaearon/redux) for the _Atomic Flux_ architecture.
-- [React](https://github.com/facebook/react) for all the goodness.
-- [React-Router](https://github.com/rackt/react-router) for the other goodness.
-- [React-Transform](https://github.com/gaearon/react-transform-boilerplate) for development fun (and productivity).
-- [Webpack](https://github.com/webpack/webpack) for keeping everything together.
