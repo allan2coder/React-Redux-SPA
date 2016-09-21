@@ -2,7 +2,7 @@
 
 ```bash
 git clone https://github.com/allan2coder/React-Redux-SPA.git
-cd redux-react-router-auth-example
+cd React-Redux-SPA
 npm install
 npm start
 open http://localhost:3000
