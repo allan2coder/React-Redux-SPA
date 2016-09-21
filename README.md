@@ -1,9 +1,19 @@
-# redux-react-router-auth-example
+# React-Redux-SPA
+
+## How to use
+
+First, you should clone the repo and install the dependencies.
 
 ```bash
-git clone https://github.com/allan2coder/React-Redux-SPA.git
-cd React-Redux-SPA
-npm install
-npm start
-open http://localhost:3000
+$ git clone https://github.com/allan2coder/React-Redux-SPA.git
+$ cd React-Redux-SPA
+$ npm install
 ```
+
+Then,launch the app.
+
+```bash
+$ npm start
+```
+
+You should see a new browser tap opening and a page of "index.html" in http://127.0.0.1:3000.
