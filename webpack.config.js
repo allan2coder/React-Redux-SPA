@@ -1,42 +1,41 @@
 var path = require('path');
 var webpack = require('webpack');
-var HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
-  devtool: 'cheap-module-eval-source-map',
+  devtool: 'eval',
   entry: [
-    'babel-polyfill',
-    'webpack-hot-middleware/client',
-    './lib/index'
+    'webpack-dev-server/client?http://localhost:3000',
+    'webpack/hot/only-dev-server',
+    './src/main'
   ],
   output: {
-    filename: 'app.js',
     path: path.join(__dirname, 'dist'),
-    publicPath: '/assets/'
+    filename: 'bundle.js',
+    publicPath: '/public/'
   },
   plugins: [
     new webpack.HotModuleReplacementPlugin(),
     new webpack.NoErrorsPlugin(),
-    new webpack.DefinePlugin({
-      'process.env': {
-        'NODE_ENV': JSON.stringify('development')
-      },
-      '__DEVTOOLS__': process.env.DEVTOOLS === 'true' ? true : false
-    }),
-    new HtmlWebpackPlugin({
-      title: 'Redux React Router Example',
-      filename: 'index.html',
-      template: 'index.template.html',
-      favicon: path.join(__dirname, 'assets', 'images', 'favicon.ico')
+    new webpack.ProvidePlugin({
+      $: 'jquery',
+      jQuery: 'jquery'
     })
   ],
-  module: {
-    loaders: [
-      { test: /\.css$/, loader: 'style-loader!css-loader!cssnext-loader' },
-      { test: /\.js$/, loader: 'babel', include: path.join(__dirname, 'lib') }
-    ]
+  resolve: {
+    extensions: ['', '.js', '.jsx'],
+    modulesDirectories: [ 'src', 'node_modules' ],
   },
-  cssnext: {
-    browsers: 'last 2 versions'
+  module: {
+    loaders: [{
+      test: /\.jsx?$/,
+      loaders: ['react-hot', 'babel'],
+      include: path.join(__dirname, 'src')
+    }, {
+      test: /\.css$/,
+      loader: 'style-loader!css-loader!autoprefixer-loader',
+    }, {
+      test: /\.(png|woff|woff2|eot|ttf|svg)$/,
+      loader: 'url-loader?limit=100000'
+    }]
   }
 };
